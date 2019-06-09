@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-     <!--张利宏-->
+    android:background="@mipmap/bg_qidongye"
+    tools:context=".activity.MainActivity">
+
     <TextView
+        android:id="@+id/text_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="张利宏" />
+        android:padding="10dp"
+        android:text=""
+        android:layout_alignParentRight="true"
+        android:textColor="#ddd"
+        android:textSize="18sp" />
 
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
