@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.YinDaoActivity" />
+        <activity android:name=".activity.ShowActivity" />
+        <activity android:name=".activity.RegistActivity" />
         <activity android:name=".activity.LoginActivity"></activity>
     </application>
 

@@ -75,6 +75,7 @@ public class LoginActivity extends AppCompatActivity implements DataCall<LoginBe
         Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(LoginActivity.this,ShowActivity.class);
         startActivity(intent);
+        finish();
     }
 
 }
