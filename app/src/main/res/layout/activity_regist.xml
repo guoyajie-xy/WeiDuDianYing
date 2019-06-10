@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.RegistActivity"
-    android:background="@drawable/beijing">
+    android:background="@mipmap/beijing">
     <!--注册-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -249,4 +249,6 @@
             android:textSize="18sp"
             android:background="@drawable/button_circle"/>
     </LinearLayout>
+
+
 </RelativeLayout>
