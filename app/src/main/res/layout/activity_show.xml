@@ -14,35 +14,36 @@
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/radio1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:button="@null"
-            android:drawableTop="@drawable/sele_home"
+
+            android:background="@drawable/sele_home"
             android:gravity="center" />
 
         <RadioButton
             android:id="@+id/radio2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:button="@null"
-            android:drawableTop="@drawable/sele_list"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:background="@drawable/sele_list"
             android:gravity="center" />
 
         <RadioButton
             android:id="@+id/radio3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:button="@null"
-            android:drawableTop="@drawable/sele_my"
+            android:background="@drawable/sele_my"
             android:gravity="center" />
     </RadioGroup>
 
