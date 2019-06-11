@@ -15,11 +15,6 @@ import java.util.TimerTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * @Auther: 郭亚杰
- * @Date:2019/6/9
- * @Description: 启动页
- */
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.text_time)
