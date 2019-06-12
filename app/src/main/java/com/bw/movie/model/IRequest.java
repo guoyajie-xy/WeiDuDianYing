@@ -64,6 +64,7 @@ public interface IRequest {
     //影片--即将上映
     @GET("movieApi/movie/v1/findComingSoonMovieList?page=1&count=10")
     Observable<Result<List<HomeThree>>> homethree();
+
     //我的信息
     @GET("movieApi/user/v1/verify/getUserInfoByUserId")
     Observable<Result<WdBean>> getUserInfoByUserId(@Header("userId")long userId,
