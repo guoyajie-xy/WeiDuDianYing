@@ -18,10 +18,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.YinDaoActivity" />
-        <activity android:name=".activity.ShowActivity" />
-        <activity android:name=".activity.RegistActivity" />
         <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.HomeListActivity"></activity>
+        <activity android:name=".activity.RegistActivity" />
+        <activity android:name=".activity.ShowActivity" />
+        <activity android:name=".activity.XtxxActivity" />
+        <activity android:name=".activity.HomeListActivity" />
+        <activity android:name=".activity.WdxxActivity"></activity>
     </application>
 
 </manifest>

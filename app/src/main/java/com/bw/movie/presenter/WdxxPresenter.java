@@ -12,13 +12,13 @@ import io.reactivex.Observable;
  * <p>
  * Description:写这个类的作用
  */
-public class RegistPresenter extends BasePresenter{
-    public RegistPresenter(DataCall dataCall) {
+public class WdxxPresenter extends BasePresenter{
+    public WdxxPresenter(DataCall dataCall) {
         super(dataCall);
     }
 
     @Override
     protected Observable getModel(IRequest iRequest, Object... args) {
-        return iRequest.registerUser((String)args[0],(int)args[1],(String)args[2],(String)args[3],(String)args[4],(String)args[5],(String)args[6]);
+        return iRequest.getUserInfoByUserId((Long) args[0],(String)args[1]);
     }
 }

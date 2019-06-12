@@ -11,7 +11,7 @@ public class RegistBean {
     public String nickName;
     public String phone;
     public String pwd;
-    public String sex;
+    public int sex;
     public String birthday;
     public String email;
     public String pwd2;

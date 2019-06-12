@@ -4,34 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.XtxxActivity">
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    tools:context=".activity.WdxxActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-
     <TextView
-        android:id="@+id/XT_text_xtxi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:text="系统消息(0条未读)"/>
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/Xtxx_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp">
-    </android.support.v7.widget.RecyclerView>
+        android:text="用户信息"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/Wdxx_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
     </LinearLayout>
+
         <ImageView
-            android:id="@+id/Xtxx_image_back"
+            android:id="@+id/Wdxx_image_back"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="20dp"
             android:layout_marginBottom="20dp"
             android:src="@mipmap/homelist_return" />
-
 </RelativeLayout>
