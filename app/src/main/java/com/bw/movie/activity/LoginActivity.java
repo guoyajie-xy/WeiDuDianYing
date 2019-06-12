@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity implements DataCall<LoginBe
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         //获取sp对象
-        SharedPreferences sharedPreferences=getSharedPreferences("config",MODE_PRIVATE);
+        final SharedPreferences sharedPreferences=getSharedPreferences("config",MODE_PRIVATE);
         boolean flag = sharedPreferences.getBoolean("flag", false);
         loginCheckPwd.setChecked(flag);
         if (flag){

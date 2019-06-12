@@ -63,7 +63,7 @@ public class ShowActivity extends AppCompatActivity {
                             fragList = new FragList();
                             transaction.add(R.id.home_frame, fragList).commit();
                         } else {
-                            transaction.show(fragHome).commit();
+                            transaction.show(fragList).commit();
                         }
                         break;
                     case R.id.radio3:
