@@ -34,7 +34,7 @@ public class XtxxActivity extends AppCompatActivity implements DataCall<List<Xtx
     private XtxxPresenter xtxxPresenter;
     private XtxxAdapter xtxxAdapter;
     LoginBean loginBean;
-    private long userId = 13039;
+    private long userId = 13062;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

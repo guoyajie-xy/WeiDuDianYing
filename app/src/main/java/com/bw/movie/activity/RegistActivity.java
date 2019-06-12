@@ -55,9 +55,6 @@ public class RegistActivity extends AppCompatActivity implements DataCall<Regist
                 if (name.isEmpty()){
                     Toast.makeText(RegistActivity.this,"昵称输入不能为空",Toast.LENGTH_SHORT).show();
                 }
-                if (sex == Integer.parseInt(null)){
-                    Toast.makeText(RegistActivity.this,"昵称输入不能为空",Toast.LENGTH_SHORT).show();
-                }
                 if (birdata.isEmpty()){
                     Toast.makeText(RegistActivity.this,"出生日期输入不能为空",Toast.LENGTH_SHORT).show();
                 }
