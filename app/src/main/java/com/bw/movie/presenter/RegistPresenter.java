@@ -19,6 +19,6 @@ public class RegistPresenter extends BasePresenter{
 
     @Override
     protected Observable getModel(IRequest iRequest, Object... args) {
-        return iRequest.registerUser((String)args[0],(String)args[1],(String)args[2],(String)args[3],(String)args[4],(String)args[5],(String)args[6]);
+        return iRequest.registerUser((String)args[0],(int)args[1],(String)args[2],(String)args[3],(String)args[4],(String)args[5],(String)args[6]);
     }
 }

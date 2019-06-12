@@ -24,5 +24,10 @@
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:text="您已成功订购两张电影票"/>
+        <View
+            android:layout_width="312dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="#ABB6BD"/>
     </LinearLayout>
 </LinearLayout>

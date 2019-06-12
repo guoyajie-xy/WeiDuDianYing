@@ -47,7 +47,7 @@ public class RegistActivity extends AppCompatActivity implements DataCall<Regist
             public void onClick(View v) {
                 //获取到输入框的值
                 String name=registEdName.getText().toString();
-                String sex=registEdSex.getText().toString();
+                int sex= Integer.parseInt(registEdSex.getText().toString());
                 String birdata=registEdData.getText().toString();
                 String call=registEdPhone.getText().toString();
                 String email=registEdMail.getText().toString();
@@ -55,7 +55,7 @@ public class RegistActivity extends AppCompatActivity implements DataCall<Regist
                 if (name.isEmpty()){
                     Toast.makeText(RegistActivity.this,"昵称输入不能为空",Toast.LENGTH_SHORT).show();
                 }
-                if (sex.isEmpty()){
+                if (sex == Integer.parseInt(null)){
                     Toast.makeText(RegistActivity.this,"昵称输入不能为空",Toast.LENGTH_SHORT).show();
                 }
                 if (birdata.isEmpty()){

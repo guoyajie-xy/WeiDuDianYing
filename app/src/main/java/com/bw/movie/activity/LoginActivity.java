@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -16,8 +17,11 @@ import android.widget.Toast;
 import com.bw.movie.AES.EncryptUtil;
 import com.bw.movie.R;
 import com.bw.movie.bean.LoginBean;
+import com.bw.movie.dao.DaoMaster;
+import com.bw.movie.dao.LoginBeanDao;
 import com.bw.movie.presenter.LoginPresenter;
 import com.bw.movie.view.DataCall;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,12 +43,14 @@ public class LoginActivity extends AppCompatActivity implements DataCall<LoginBe
     @BindView(R.id.login_image_wx)
     ImageView loginImageWx;
     private LoginPresenter loginPresenter;
-
+    LoginBeanDao loginBeanDao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+       // userInfoDao=DaoMaster.newDevSession(LoginActivity.this,UserInfoDao.TABLENAME).getUserInfoDao();
+        loginBeanDao = DaoMaster.newDevSession(this,loginBeanDao.TABLENAME).getLoginBeanDao();
         //获取sp对象
         final SharedPreferences sharedPreferences=getSharedPreferences("config",MODE_PRIVATE);
         boolean flag = sharedPreferences.getBoolean("flag", false);
@@ -95,6 +101,7 @@ public class LoginActivity extends AppCompatActivity implements DataCall<LoginBe
         Toast.makeText(LoginActivity.this,"登录成功",Toast.LENGTH_SHORT).show();
         Intent intent=new Intent(LoginActivity.this,ShowActivity.class);
         startActivity(intent);
+        loginBeanDao.insertOrReplaceInTx(data);
         finish();
     }
 
