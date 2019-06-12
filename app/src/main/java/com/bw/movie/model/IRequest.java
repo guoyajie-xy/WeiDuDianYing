@@ -8,7 +8,6 @@ import com.bw.movie.bean.HomeTwoBean;
 import com.bw.movie.bean.LoginBean;
 import com.bw.movie.bean.RegistBean;
 import com.bw.movie.bean.Result;
-import com.bw.movie.bean.UserInfo;
 
 import java.util.List;
 
@@ -63,4 +62,6 @@ public interface IRequest {
     //影院--附近影院
     @GET("movieApi/cinema/v1/findNearbyCinemas?page=1&count=10")
     Observable<Result<List<CinemaTwoBean>>> cinematwoshow();
+
+
 }
