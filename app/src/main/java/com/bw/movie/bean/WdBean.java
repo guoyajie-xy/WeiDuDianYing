@@ -7,12 +7,12 @@ package com.bw.movie.bean;
  * <p>
  * Description:写这个类的作用
  */
-public class UserInfo {
-    public String birthday;
+public class WdBean {
     public String id;
+    public String birthday;
+    public String headPic;
     public String lastLoginTime;
     public String nickName;
     public String phone;
-    public String sex;
-    public String headPic;
+    public int sex;
 }
