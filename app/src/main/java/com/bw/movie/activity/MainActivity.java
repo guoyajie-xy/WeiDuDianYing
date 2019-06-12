@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.text_time)
     TextView text_time;
-    private int time = 2;
+    private int time = 1;
     private Timer timer;
     //线程
     private Handler handler = new Handler() {

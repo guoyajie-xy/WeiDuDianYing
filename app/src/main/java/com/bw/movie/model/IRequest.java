@@ -1,5 +1,7 @@
 package com.bw.movie.model;
 
+import com.bw.movie.bean.CinemaOneBean;
+import com.bw.movie.bean.CinemaTwoBean;
 import com.bw.movie.bean.HomeOneBean;
 import com.bw.movie.bean.HomeThree;
 import com.bw.movie.bean.HomeTwoBean;
@@ -53,4 +55,12 @@ public interface IRequest {
     //影片--即将上映
     @GET("movieApi/movie/v1/findComingSoonMovieList?page=1&count=10")
     Observable<Result<List<HomeThree>>> homethree();
+
+    //影院--推荐影院
+    @GET("movieApi/cinema/v1/findRecommendCinemas?page=1&count=10")
+    Observable<Result<List<CinemaOneBean>>> cinemaoneshow();
+
+    //影院--附近影院
+    @GET("movieApi/cinema/v1/findNearbyCinemas?page=1&count=10")
+    Observable<Result<List<CinemaTwoBean>>> cinematwoshow();
 }
