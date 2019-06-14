@@ -9,7 +9,7 @@ package com.bw.movie.bean;
  */
 public class WdBean {
     public String id;
-    public String birthday;
+    public long birthday;
     public String headPic;
     public String lastLoginTime;
     public String nickName;

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.GpjlActivity"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/gp_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/gp_rb1"
+            android:layout_width="83dp"
+            android:layout_height="25dp"
+            android:background="@drawable/sele_cinema_radio"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:checked="true"
+            android:text="待付款"
+            android:button="@null"/>
+        <RadioButton
+            android:id="@+id/gp_rb2"
+            android:layout_width="83dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:background="@drawable/sele_cinema_radio"
+            android:text="已完成"
+            android:button="@null"/>
+    </RadioGroup>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/gp_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+    </android.support.v4.view.ViewPager>
+</LinearLayout>

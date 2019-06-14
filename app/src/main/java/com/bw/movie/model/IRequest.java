@@ -8,12 +8,18 @@ import com.bw.movie.bean.HomeTwoBean;
 import com.bw.movie.bean.LoginBean;
 import com.bw.movie.bean.RegistBean;
 import com.bw.movie.bean.Result;
+import com.bw.movie.bean.SctxBean;
 import com.bw.movie.bean.WdBean;
+import com.bw.movie.bean.WdgpBean;
+import com.bw.movie.bean.WdgzBean;
+import com.bw.movie.bean.WdgzBean2;
 import com.bw.movie.bean.XtxxBean;
 
 import java.util.List;
 
 import io.reactivex.Observable;
+import okhttp3.MultipartBody;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -77,4 +83,28 @@ public interface IRequest {
     //影院--附近影院
     @GET("movieApi/cinema/v1/findNearbyCinemas?page=1&count=10")
     Observable<Result<List<CinemaTwoBean>>> cinematwoshow();
+    //上传头像(我的)
+    @POST("movieApi/user/v1/verify/uploadHeadPic")
+    Observable<Result<SctxBean>> uploadHeadPic(@Header("userId")String userId,
+                                               @Header("sessionId")String sessionId,
+                                               @Body MultipartBody body);
+    //我的购票(我的)
+    @GET("movieApi/user/v1/verify/findUserBuyTicketRecordList")
+    Observable<Result<List<WdgpBean>>> findUserBuyTicketRecordList(@Header("userId")int userId,
+                                                                   @Header("sessionId")String sessionId,
+                                                                   @Query("page")String page,
+                                                                   @Query("count")String count,
+                                                                   @Query("status")String status);
+    //我的关注(影院关注)
+    @GET("movieApi/cinema/v1/verify/findCinemaPageList")
+    Observable<Result<List<WdgzBean>>> findCinemaPageList(@Header("userId")long userId,
+                                                          @Header("sessionId") String sessionId,
+                                                          @Query("page")String page,
+                                                          @Query("count")String count);
+    //我的关注(电影关注)
+    @GET("movieApi/movie/v1/verify/findMoviePageList")
+    Observable<Result<List<WdgzBean2>>> findMoviePageList(@Header("userId")long userId,
+                                                          @Header("sessionId")String sessionId,
+                                                          @Query("page")String page,
+                                                          @Query("count")String count);
 }
