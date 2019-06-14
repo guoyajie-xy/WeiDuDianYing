@@ -12,6 +12,7 @@ import com.bw.movie.bean.SctxBean;
 import com.bw.movie.bean.WdBean;
 import com.bw.movie.bean.WdgpBean;
 import com.bw.movie.bean.WdgzBean;
+import com.bw.movie.bean.WdgzBean2;
 import com.bw.movie.bean.XtxxBean;
 
 import java.util.List;
@@ -96,9 +97,14 @@ public interface IRequest {
                                                                    @Query("status")String status);
     //我的关注(影院关注)
     @GET("movieApi/cinema/v1/verify/findCinemaPageList")
-    Observable<Result<List<WdgzBean>>> findCinemaPageList(@Header("userId")String userId,
+    Observable<Result<List<WdgzBean>>> findCinemaPageList(@Header("userId")long userId,
                                                           @Header("sessionId") String sessionId,
                                                           @Query("page")String page,
                                                           @Query("count")String count);
-
+    //我的关注(电影关注)
+    @GET("movieApi/movie/v1/verify/findMoviePageList")
+    Observable<Result<List<WdgzBean2>>> findMoviePageList(@Header("userId")long userId,
+                                                          @Header("sessionId")String sessionId,
+                                                          @Query("page")String page,
+                                                          @Query("count")String count);
 }

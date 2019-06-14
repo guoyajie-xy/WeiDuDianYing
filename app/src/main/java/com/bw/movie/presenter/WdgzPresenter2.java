@@ -12,13 +12,13 @@ import io.reactivex.Observable;
  * <p>
  * Description:写这个类的作用
  */
-public class WdgzPresenter extends BasePresenter{
-    public WdgzPresenter(DataCall dataCall) {
+public class WdgzPresenter2 extends BasePresenter{
+    public WdgzPresenter2(DataCall dataCall) {
         super(dataCall);
     }
 
     @Override
     protected Observable getModel(IRequest iRequest, Object... args) {
-        return iRequest.findCinemaPageList((Long) args[0],(String)args[1],(String)args[2],(String)args[3]);
+        return iRequest.findMoviePageList((long)args[0],(String)args[1],(String)args[2],(String)args[3]);
     }
 }

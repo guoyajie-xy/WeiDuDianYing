@@ -11,8 +11,4 @@
         android:background="@drawable/my_circle"
         android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="噗哈哈，你打不过我的样子真可爱"/>
 </LinearLayout>
