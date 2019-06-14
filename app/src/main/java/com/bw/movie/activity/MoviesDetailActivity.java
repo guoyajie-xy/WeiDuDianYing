@@ -152,6 +152,7 @@ public class MoviesDetailActivity extends AppCompatActivity {
                 });
             }
         });
+
         //剧照
         moviesdetail_juzhao.setOnClickListener(new View.OnClickListener() {
             @Override
