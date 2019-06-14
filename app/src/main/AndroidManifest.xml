@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bw.movie">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".app.MyApplication"
         android:allowBackup="true"
@@ -23,7 +28,9 @@
         <activity android:name=".activity.ShowActivity" />
         <activity android:name=".activity.XtxxActivity" />
         <activity android:name=".activity.HomeListActivity" />
-        <activity android:name=".activity.WdxxActivity"></activity>
+        <activity android:name=".activity.WdxxActivity" />
+        <activity android:name=".activity.GpjlActivity" />
+        <activity android:name=".activity.WdgzActivity"></activity>
     </application>
 
 </manifest>

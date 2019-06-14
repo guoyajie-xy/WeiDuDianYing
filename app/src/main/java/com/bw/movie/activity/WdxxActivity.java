@@ -26,7 +26,7 @@ public class WdxxActivity extends AppCompatActivity implements DataCall<WdBean> 
     LoginBean loginBean;
     @BindView(R.id.Wdxx_recycler_view)
     RecyclerView WdxxRecyclerView;
-    private long userId = 13062;
+    private long userId = 13039;
     private WdxxAdapter wdxxAdapter;
 
     @Override

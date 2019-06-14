@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.bw.movie.R;
 import com.bw.movie.bean.WdBean;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,9 +42,13 @@ public class WdxxAdapter extends RecyclerView.Adapter<WdxxAdapter.holder> {
 
     @Override
     public void onBindViewHolder(@NonNull holder holder, int i) {
-        holder.wd_text_birthday.setText(list.get(i).birthday);
+        long birthday=list.get(i).birthday;
+        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-DD");
+        String day=simpleDateFormat.format(birthday);
+        holder.wd_text_birthday.setText(day);
         holder.wd_text_name.setText(list.get(i).nickName);
         holder.wd_text_phone.setText(list.get(i).phone);
+        Glide.with(context).load(list.get(i).headPic).apply(RequestOptions.circleCropTransform()).into(holder.wd_image_tx);
         int sex=list.get(i).sex;
         if (sex==1){
             holder.wd_text_sex.setText("男");
